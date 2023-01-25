@@ -55,11 +55,12 @@ export function Post({ author, content, publishedAt }) {
       </header>
 
       <div className={styles.content}>
-        {content.map((line) => {
-          if (line.type === "paragraph") return <p>{line.content}</p>;
+        {content.map((line, index) => {
+          if (line.type === "paragraph")
+            return <p key={index}>{line.content}</p>;
           else if (line.type === "paragraph")
             return (
-              <p>
+              <p key={index}>
                 <a>{line.content}</a>
               </p>
             );
