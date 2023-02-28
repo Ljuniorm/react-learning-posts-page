@@ -4,7 +4,7 @@ import igniteLogo from '../assets/ignite-logo.png'
 import { useSelector } from 'react-redux';
 
 export function Header() {
-    const count = useSelector((state) => state.counter.value)
+    const count = useSelector((state) => state.digitsCounter.value)
 
     return (
         <header className={styles.header}>

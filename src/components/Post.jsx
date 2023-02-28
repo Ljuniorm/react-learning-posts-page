@@ -2,7 +2,7 @@ import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { increment } from '../store/features/counterSlice'
+import { increment } from '../store/features/digitsCounter'
 
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
