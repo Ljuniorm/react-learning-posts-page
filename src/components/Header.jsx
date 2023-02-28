@@ -9,7 +9,7 @@ export function Header() {
     return (
         <header className={styles.header}>
             <img src={igniteLogo} alt="Logotipo" />
-            <span style={{ position: 'absolute', right: 0, marginRight: 20 }}>Letras digitadas: {count}</span>
+            <span style={{ position: 'absolute', right: 0, marginRight: 20 }}>Dígitos: {count}</span>
         </header>
     );
 }
