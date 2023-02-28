@@ -1,6 +1,8 @@
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { increment } from '../store/features/counterSlice'
 
 import { Avatar } from "./Avatar";
 import { Comment } from "./Comment";
@@ -9,6 +11,7 @@ import styles from "./Post.module.css";
 
 export function Post({ author, content, publishedAt }) {
   const [comments, setComments] = useState(["Post muito bacana, hein?!"]);
+  const dispatch = useDispatch()
 
   const [newCommentText, setNewCommentText] = useState("");
 
@@ -34,6 +37,7 @@ export function Post({ author, content, publishedAt }) {
   function handleNewCommentChange() {
     event.target.setCustomValidity("");
     setNewCommentText(event.target.value);
+    dispatch(increment())
   }
 
   function handleNewCommentInvalid() {
